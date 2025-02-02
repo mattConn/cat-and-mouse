@@ -1,0 +1,75 @@
+body {
+    background-color: white;
+}
+
+.wrapper {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-family: courier;
+}
+
+.wrapper.waiting .cell:hover {
+    cursor: progress;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+.cell {
+    width: 60px;
+    height: 60px;
+    border: solid 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-size: 3em;
+}
+
+.cell.adjacent {
+    cursor: pointer;
+}
+
+.cell.adjacent:hover {
+    background-color: wheat;
+}
+
+.cell.blocker:hover {
+    background-color: rosybrown;
+}
+
+.cell::selection {
+    background-color: transparent;
+}
+
+.status {
+    font-size: 3em;
+    margin-top: 10px;
+    background-color: white;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    display: none;
+}
+
+.status.info {
+    background-color: lightblue;
+}
+
+.status.success {
+    background-color: lightgreen;
+}
+
+.status.error {
+    background-color: lightcoral;
+}
+
+.title {
+    font-size: 3em;
+}
